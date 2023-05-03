@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Q4 Seatwork 2</title>
+	<style type="text/css">
+    #conversion{
+    margin: auto;
+    width:60%;
+  	bg: white;
+  	padding: 10px;
+  	border-radius: 25px;
+  	border: 4px solid royalblue;
+    }
+    body{
+    	background-image: url(https://wallpapers.com/images/featured/mvehfqz6w2ges2dj.jpg);
+    	background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="bg-light" id="conversion">
+<p>The current time is:
+<p id="today" ></p>
+
+<script>
+const date = new Date();
+document.getElementById("today").innerHTML = date;
+</script>
+
+
+<h1 class="text-info"> Weather Program</h1>
+<h5 class="text-secondary"> Farenheit → Celsius</h5>
+<br>
+<form>
+  Enter Farenheit: <input type="number" name="num1" id="num1">
+  <br>
+  <br>
+  <button type="submit" onclick="Compute()">Calculate to Celsius</button>
+</form>
+<script>
+  function Compute(){
+    var num1 = document.getElementById("num1").value;
+    var product = Number ((num1) - 32) * 5/9;
+    window.alert("Celsius " + product);
+  }
+</script>
+<br>
+<p> Formula Used: (Farenheit - 32) x 5/9 or 0.5556 = Celsius</p>
+<br>
+<hr>
+<h4 class="text-info"> Further Information</h4>
+<table class="table table-striped table-image col-12" align="center" style="width:70%; height:10%">
+	<thead>
+		<th scope="col">Celsius</th>
+        <th scope="col">Farenheit</th>
+       	<th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>-273</td>
+        	<td>-459.67</td>
+       		<td>Absolute zero temperature</td>
+       	</tr>
+       	<tr>
+        	<td>0</td>
+        	<td>32</td>
+       		<td>Freezing/melting point of water</td>
+       	</tr>
+       	<tr>
+        	<td>21</td>
+        	<td>69.8</td>
+       		<td>Room temperature</td>
+       	</tr>
+       	<tr>
+        	<td>37</td>
+        	<td>98.6</td>
+       		<td>Average body tempterature</td>
+       	</tr>
+       	<tr>
+        	<td>100</td>
+        	<td>212</td>
+       		<td>Boiling point of water</td>
+       	</tr>
+       	</tbody>
+       </table>
+</table>
+</body>
+</html>
